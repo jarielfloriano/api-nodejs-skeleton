@@ -1,0 +1,23 @@
+{
+	"development": {
+		"user": "root",
+		"password": "root",
+		"database": "madero",
+		"dialect": "sqlite",
+		"storage": "./src/database/database.sqlite"
+	},
+	"test": {
+		"user": "root",
+		"password": "root",
+		"database": "madero",
+		"dialect": "sqlite",
+		"storage": "./src/database/database.sqlite"
+	},
+	"production": {
+		"user": "root",
+		"password": "root",
+		"database": "madero",
+		"dialect": "sqlite",
+		"storage": "./src/database/database.sqlite"
+	}
+}

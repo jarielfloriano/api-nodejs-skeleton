@@ -1,0 +1,56 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run index.js",
+    "start:dev": "npx nodemon --exec babel-node index.js",
+    "prod": "node ./dist/index.js",
+    "build": "babel src -d ./dist/src && babel index.js -d ./dist",
+	"migrate:up": "npx sequelize-cli db:migrate",
+	"migrate:undo": "npx sequelize-cli db:migrate:undo",
+	"seeder:all": "npx sequelize-cli db:seed:all --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.58.0",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@hapi/boom": "^9.1.4",
+    "aws-sdk": "^2.1078.0",
+    "axios": "^0.26.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.1",
+    "mssql": "^8.0.2",
+    "sequelize": "^6.5.0",
+    "sqlite3": "^5.0.11",
+    "tedious": "^14.3.0",
+    "winston": "^3.6.0",
+    "winston-cloudwatch": "^3.1.1",
+    "yup": "^0.32.11",
+    "yup-locale-pt": "^0.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "2.5.1",
+    "sequelize-cli": "^6.4.1"
+  }
+}
